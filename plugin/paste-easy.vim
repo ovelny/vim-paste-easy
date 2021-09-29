@@ -60,9 +60,7 @@ func! s:start_easy_paste()
         return
     endif
 
-    if PlugLoaded('vim-mucomplete')
-        MUcompleteAutoOff
-    endif
+    MUcompleteAutoOff
 
     let s:counter = 0
     let s:changedtick = 0
@@ -84,9 +82,7 @@ func! s:stop_easy_paste()
         return
     endif
 
-    if PlugLoaded('vim-mucomplete')
-        MUcompleteAutoOn
-    endif
+    MUcompleteAutoOn
 
     let s:past_easy_mode = 0
     set nopaste
