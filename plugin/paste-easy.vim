@@ -60,6 +60,8 @@ func! s:start_easy_paste()
         return
     endif
 
+    DelimitMateOff
+
     let s:counter = 0
     let s:changedtick = 0
     let s:past_easy_mode = 1
@@ -79,6 +81,8 @@ func! s:stop_easy_paste()
     if s:past_easy_mode==0
         return
     endif
+
+    DelimitMateOn
 
     let s:past_easy_mode = 0
     set nopaste
